@@ -6,12 +6,12 @@ COPY pip3_req.txt pip3_req.txt
 RUN pip3 install --upgrade pip && pip3 install --no-binary :all:  --no-cache-dir cython  
 RUN pip3 install --upgrade pip && pip3 install -r pip3_req.txt  
 
-RUN git clone https://github.com/matterport/Mask_RCNN.git
+RUN git clone https://github.com/dmitrysarov/Mask_RCNN.git
 RUN git clone https://github.com/dmitrysarov/vim_install.git && cd vim_install && ./install_vim.sh && ./config.sh && cd - && rm -r vim_install
-RUN git clone https://github.com/waleedka/coco.git && \
-                                 cd coco/PythonAPI && \
-               python3 setup.py build_ext --inplace && \
-                    mv pycocotools ../../Mask_RCNN && \
-                               cd - && rm -rf coco   
+#RUN git clone https://github.com/waleedka/coco.git && \
+#                                 cd coco/PythonAPI && \
+#               python3 setup.py build_ext --inplace && \
+#                    mv pycocotools ../../Mask_RCNN && \
+#                               cd - && rm -rf coco   
 RUN git clone https://github.com/dmitrysarov/av_test.git
 COPY jupyter_config /root/.jupyter/jupyter_notebook_config.json

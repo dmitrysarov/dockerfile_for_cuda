@@ -14,4 +14,5 @@ RUN git clone https://github.com/waleedka/coco.git && \
                python3 setup.py build_ext --inplace && \
                     mv pycocotools ../../Mask_RCNN && \
                                cd - && rm -rf coco   
+RUN git clone https://github.com/dmitrysarov/av_test.git
 COPY jupyter_config /root/.jupyter/jupyter_notebook_config.json

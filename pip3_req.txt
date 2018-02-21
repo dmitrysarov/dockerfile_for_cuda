@@ -7,4 +7,6 @@ tensorflow-tensorboard==0.4.0rc3
 # in deploy case use tensorflow==1.4.1
 setuptools==38.2.5
 opencv-python==3.4.0.12
+pandas==0.22.0
 jupyter
+

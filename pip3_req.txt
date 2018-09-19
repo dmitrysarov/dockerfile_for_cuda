@@ -8,4 +8,6 @@ opencv-python
 pandas==0.22.0
 jupyter
 requests==2.19.1
+tb-nightly==1.11.0a20180831
+tqdm==4.25.0
 

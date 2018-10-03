@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
-RUN apt-get update && apt-get install git python-pip python3-pip python3-dev python3-tk libgtk2.0-dev tmux wget libcurl4-gnutls-dev python-dev curl -y 
+RUN apt-get update && apt-get install git python-pip python-dev python3-pip python3-dev python3-tk libgtk2.0-dev tmux wget libcurl4-gnutls-dev python-dev curl -y 
+RUN apt-get update && apt-get install build-essential cmake -y
 
 COPY pip3_req.txt pip3_req.txt
 RUN python3 -m pip install --upgrade pip && python3 -m pip install --no-binary :all:  --no-cache-dir cython  

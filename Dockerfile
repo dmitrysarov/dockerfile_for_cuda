@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.0-cudnn7-devel
+FROM ubuntu:16.04
 RUN apt-get update && apt-get install git python-pip python3-pip python3-dev python3-tk libgtk2.0-dev tmux wget libcurl4-gnutls-dev python-dev curl -y 
 
 COPY pip3_req.txt pip3_req.txt
